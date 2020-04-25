@@ -1,0 +1,41 @@
+.header-abpage {
+    height: 45vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary, .8), rgba($color-secondary-dark, .5)),
+        url(../img/header-about.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 30vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 30vh, 0 100%);
+
+    @include respond(tab-port) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 35vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 35vh, 0 100%);
+    }
+
+    @include respond(phone) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 40vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 40vh, 0 100%);
+    }
+
+    &__logo-box {
+        position: absolute;
+        top: 2.5rem;
+        left: 2rem;
+    }
+
+    &__logo-box i{ 
+        font-size: 5.5rem;
+        color: $white;
+    }
+    
+    &__text-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
